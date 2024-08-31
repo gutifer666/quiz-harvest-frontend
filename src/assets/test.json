@@ -1,0 +1,230 @@
+{
+  "questions": [
+    {
+      "id": 5.760562659292985e+18,
+      "textQuestion": "El porcentaje de registros consultados o modificados en cada tratamiento del fichero, respecto al número total de registros contenidos en él, se denomina:",
+      "options": [
+        {
+          "id": 1.3433538684237714e+18,
+          "textOption": "Frecuencia de renovación.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 3.551822251944688e+18,
+          "textOption": "Tasa de renovación.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 6.258398194796051e+18,
+          "textOption": "Frecuencia de consulta.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 6.460564437394869e+18,
+          "textOption": "Tasa de consulta.",
+          "selected": false,
+          "correct": true
+        }
+      ],
+      "subject": "DATABASES",
+      "evaluation": "FIRST"
+    },
+    {
+      "id": 2.455379615425907e+18,
+      "textQuestion": "Para eliminar una tabla de la base de datos utilizaremos la instrucción:",
+      "options": [
+        {
+          "id": 2.3251786462997187e+18,
+          "textOption": "DROP",
+          "selected": false,
+          "correct": true
+        },
+        {
+          "id": 3.3224590003114025e+18,
+          "textOption": "ALTER",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 8.418966605453608e+18,
+          "textOption": "DELETE",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 8.65773301556083e+18,
+          "textOption": "REVOKE",
+          "selected": false,
+          "correct": false
+        }
+      ],
+      "subject": "DATABASES",
+      "evaluation": "FIRST"
+    },
+    {
+      "id": 7.457204515118793e+18,
+      "textQuestion": "Entre entidades, si desaparece una instancia de entidad fuerte y también desaparecen las instancias de entidad débiles que dependan de la primera, considerándose que cada ocurrencia de entidad débil puede identificarse por sí misma, estaremos ante:",
+      "options": [
+        {
+          "id": 2.1984637922039729e+18,
+          "textOption": "Una dependencia en identificación.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 2.3313393688076805e+18,
+          "textOption": "Una dependencia en existencia.",
+          "selected": false,
+          "correct": true
+        },
+        {
+          "id": 6.604190867938917e+18,
+          "textOption": "Una entidad débil.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 8.239246606210285e+18,
+          "textOption": "Una jerarquía de especialización.",
+          "selected": false,
+          "correct": false
+        }
+      ],
+      "subject": "DATABASES",
+      "evaluation": "FIRST"
+    },
+    {
+      "id": 3.90388922950777e+18,
+      "textQuestion": "Nos encontramos en el proceso de normalización. Si hemos de crear a partir de la tabla inicial, una nueva tabla con los atributos que no poseen dependencias transitivas de la clave primaria y en otra tabla colocamos los atributos no clave que intervienen en una dependencia transitiva, estamos normalizando para conseguir que dicha tabla esté en:",
+      "options": [
+        {
+          "id": 1.2230590724816433e+18,
+          "textOption": "2FN",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 1.4849624431215434e+18,
+          "textOption": "FNBC",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 4.5314866860514534e+18,
+          "textOption": "1FN",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 5.7307853081919e+18,
+          "textOption": "3FN",
+          "selected": false,
+          "correct": true
+        }
+      ],
+      "subject": "DATABASES",
+      "evaluation": "FIRST"
+    },
+    {
+      "id": 7.836352088950027e+18,
+      "textQuestion": "Una tabla  cuyas filas y columnas se obtienen a partir de una o de varias tablas que constituyen nuestro modelo se denomina:",
+      "options": [
+        {
+          "id": 224566677061911300,
+          "textOption": "Esquema conceptual.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 2.2452451307985784e+18,
+          "textOption": "Vista",
+          "selected": false,
+          "correct": true
+        },
+        {
+          "id": 3.331667263577045e+18,
+          "textOption": "Tabla externa.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 8.103965197591625e+18,
+          "textOption": "Esquema virtual.",
+          "selected": false,
+          "correct": false
+        }
+      ],
+      "subject": "DATABASES",
+      "evaluation": "FIRST"
+    },
+    {
+      "id": 38667780563645200,
+      "textQuestion": "Indica qué afirmación es incorrecta en relación a las claves candidatas:",
+      "options": [
+        {
+          "id": 3.1418563729049324e+18,
+          "textOption": "Toda relación tiene al menos una clave candidata.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 6.697695503150922e+18,
+          "textOption": "Toda clave alternativa es también clave candidata.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 6.938920372493334e+18,
+          "textOption": "Una clave candidata es una clave primaria que también cumple la propiedad de minimalidad.",
+          "selected": false,
+          "correct": true
+        },
+        {
+          "id": 8.573982761897119e+18,
+          "textOption": "Toda clave primaria es también clave candidata.",
+          "selected": false,
+          "correct": false
+        }
+      ],
+      "subject": "DATABASES",
+      "evaluation": "FIRST"
+    },
+    {
+      "id": 5.214485798686311e+18,
+      "textQuestion": "Los sistemas gestores de bases de datos:",
+      "options": [
+        {
+          "id": 213597975997624900,
+          "textOption": "Facilitan el acceso a los datos, aportando rapidez y evitando la pérdida de datos.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 2.7435260606356987e+18,
+          "textOption": "Ofrecen al usuario una visión real de la complejidad relacionada con cómo se almacenan y mantienen los datos.",
+          "selected": false,
+          "correct": true
+        },
+        {
+          "id": 3.2334009296897495e+18,
+          "textOption": "Disminuyen la redundancia y la inconsistencia de datos.",
+          "selected": false,
+          "correct": false
+        },
+        {
+          "id": 4.288584351537775e+18,
+          "textOption": "Aseguran la integridad de los datos.\n",
+          "selected": false,
+          "correct": false
+        }
+      ],
+      "subject": "DATABASES",
+      "evaluation": "FIRST"
+    }
+  ],
+  "subject": "DATABASES",
+  "evaluation": "FIRST"
+}

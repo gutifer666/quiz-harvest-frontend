@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-test-maker-view',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './test-maker-view.component.scss'
 })
 export class TestMakerViewComponent {
-
+  subject: string="DATABASES";
+  evaluation: string="FIRST";
+  constructor(private router: Router) {
+  }
+  navigateToTestView() {
+    this.router.navigate(['/test', {subject: this.subject, evaluation: this.evaluation}]).then(r => console.log(r));
+  }
 }

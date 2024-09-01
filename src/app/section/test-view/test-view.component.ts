@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import {LocalFileTestRepository} from "../../module/test/infrastructure/localFileTestRepository";
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-test-view',
   standalone: true,
-  imports: [],
+  imports: [CardModule],
   templateUrl: './test-view.component.html',
   styleUrl: './test-view.component.scss'
 })

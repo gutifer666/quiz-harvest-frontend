@@ -1,4 +1,4 @@
-{
+export const testJSON = {
   "questions": [
     {
       "id": 5.760562659292985e+18,
@@ -227,4 +227,4 @@
   ],
   "subject": "DATABASES",
   "evaluation": "FIRST"
-}
+};

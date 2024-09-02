@@ -11,9 +11,13 @@ import {Router} from "@angular/router";
 export class TestMakerViewComponent {
   subject: string="DATABASES";
   evaluation: string="FIRST";
+  percentageOfQuestions: number=100;
   constructor(private router: Router) {
   }
   navigateToTestView() {
-    this.router.navigate(['/test', {subject: this.subject, evaluation: this.evaluation}]).then(r => console.log(r));
+    this.router.navigate(['/test', {subject: this.subject,
+                                             evaluation: this.evaluation,
+                                             percentageOfQuestions: this.percentageOfQuestions}])
+                                             .then(r => console.log(r));
   }
 }

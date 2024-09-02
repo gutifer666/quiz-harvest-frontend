@@ -1,8 +1,12 @@
 <div class="card flex justify-content-center">
-  @if (test && subject) {
-    <p-card header="{{subject}}">
-      <p>{{ test.questions[0].textQuestion }}</p>
+  @if (test) {
+    <p-card header="{{test.subject}}  -  {{test.evaluation}} ">
       <app-question-view></app-question-view>
+    </p-card>
+  } @else {
+    <p-card header="No test found">
+      <p>There is no test found. Please go back to the test maker view and create a test.</p>
+      <button (click)="navigateToTestMakerView()">Go to Test Maker View</button>
     </p-card>
   }
 </div>

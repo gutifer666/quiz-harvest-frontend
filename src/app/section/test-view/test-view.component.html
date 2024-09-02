@@ -1,6 +1,8 @@
 <div class="card flex justify-content-center">
-  <p-card *ngIf="test" header="{{subject}}">
-    <p>{{test.questions[0].textQuestion}}</p>
-    <app-question-view></app-question-view>
-  </p-card>
+  @if (test && subject) {
+    <p-card header="{{subject}}">
+      <p>{{ test.questions[0].textQuestion }}</p>
+      <app-question-view></app-question-view>
+    </p-card>
+  }
 </div>

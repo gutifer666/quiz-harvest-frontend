@@ -1,8 +1,12 @@
-<p-card header="Este es el texto de la pregunta en cuestión.">
-    <ul>
-      <li>Respuesta 1</li>
-      <li>Respuesta 2</li>
-      <li>Respuesta 3</li>
-      <li>Respuesta 4</li>
-    </ul>
+<p-card header="{{question()?.textQuestion}}">
+    <div *ngFor="let option of question()?.options">
+        <label>
+            <input type="radio" name="option" (change)="selectOption(option)">
+            {{option.textOption}}
+        </label>
+    </div>
+</p-card>
+
+<p-card header="Selected Option">
+    {{question() | json}}
 </p-card>

@@ -1,7 +1,7 @@
 <div class="card flex justify-content-center">
   @if (test) {
     <p-card header="{{test.subject}}  -  {{test.evaluation}} ">
-      <app-question-view></app-question-view>
+      <app-question-view [(question)]="test.questions[currentQuestionIndex]"></app-question-view>
     </p-card>
   } @else {
     <p-card header="No test found">

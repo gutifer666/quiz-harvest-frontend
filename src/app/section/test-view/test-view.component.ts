@@ -15,6 +15,7 @@ import {NgIf} from "@angular/common";
 })
 export class TestViewComponent implements OnInit {
     test: Test | undefined;
+    currentQuestionIndex: number = 0;
 
     constructor(private router: Router, private route: ActivatedRoute, private testService: LocalFileTestRepository) {
     }

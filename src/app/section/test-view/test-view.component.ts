@@ -28,6 +28,29 @@ export class TestViewComponent implements OnInit {
             parseInt(routeParams.get('percentageOfQuestions')!));
     }
 
+    nextQuestion() {
+        if (this.currentQuestionIndex < this.test?.questions.length! - 1) {
+            this.currentQuestionIndex++;
+        }
+    }
+
+    hasNextQuestion(): boolean {
+        return this.currentQuestionIndex < (this.test?.questions.length ?? 0) - 1;
+    }
+
+    isLastQuestion(): boolean {
+        return this.currentQuestionIndex === (this.test?.questions.length ?? 0) - 1;
+    }
+
+    isOptionSelected() {
+        return this.test?.questions[this.currentQuestionIndex].options.some(option => option.selected);
+    }
+
+    checkTest() {
+        console.log('Checking test...');
+        // this.router.navigate(['test-result', this.test]).then(r => console.log(r));
+    }
+
     navigateToTestMakerView() {
         this.router.navigate(['']).then(r => console.log(r));
     }

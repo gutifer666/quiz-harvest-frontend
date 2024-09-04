@@ -2,6 +2,14 @@
   @if (test) {
     <p-card header="{{test.subject}}  -  {{test.evaluation}} ">
       <app-question-view [(question)]="test.questions[currentQuestionIndex]"></app-question-view>
+        <div class="flex justify-content-center">
+            @if (hasNextQuestion()) {
+                <button (click)="nextQuestion()" [disabled]="!isOptionSelected()">Next</button>
+            }
+            @if (isLastQuestion()) {
+                <button (click)="checkTest()" [disabled]="!isOptionSelected()">Check Test</button>
+            }
+        </div>
     </p-card>
   } @else {
     <p-card header="No test found">

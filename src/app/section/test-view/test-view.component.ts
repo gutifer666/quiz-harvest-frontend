@@ -5,11 +5,12 @@ import {QuestionViewComponent} from "../question-view/question-view.component";
 import {Test} from "../../module/test/domain/Test";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgIf} from "@angular/common";
+import {Button} from "primeng/button";
 
 @Component({
     selector: 'app-test-view',
     standalone: true,
-    imports: [CardModule, QuestionViewComponent, NgIf],
+    imports: [CardModule, QuestionViewComponent, NgIf, Button],
     templateUrl: './test-view.component.html',
     styleUrl: './test-view.component.scss'
 })

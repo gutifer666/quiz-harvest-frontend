@@ -1,9 +1,10 @@
 import {Component, model} from '@angular/core';
 import {CardModule} from "primeng/card";
-import {Test} from "../../module/test/domain/Test";
 import {Question} from "../../module/test/domain/Question";
 import {JsonPipe, NgForOf} from "@angular/common";
 import {Option} from "../../module/test/domain/Option";
+import {RadioButtonModule} from "primeng/radiobutton";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-question-view',
@@ -11,7 +12,9 @@ import {Option} from "../../module/test/domain/Option";
     imports: [
         CardModule,
         NgForOf,
-        JsonPipe
+        JsonPipe,
+        RadioButtonModule,
+        FormsModule
     ],
   templateUrl: './question-view.component.html',
   styleUrl: './question-view.component.scss'
@@ -22,7 +25,7 @@ export class QuestionViewComponent {
     selectOption(option: Option) {
        if (this.question()) {
            this.question()?.options.forEach(opt => opt.selected = false); // Deselect all options
-              option.selected = true; // Select the option
+           option.selected = true; // Select the option
        }
     }
 }

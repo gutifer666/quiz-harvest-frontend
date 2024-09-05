@@ -1,7 +1,7 @@
-<div class="card flex justify-content-center">
-  @if (test) {
-    <p-card header="{{test.subject}}  -  {{test.evaluation}} ">
-      <app-question-view [(question)]="test.questions[currentQuestionIndex]"></app-question-view>
+<div class="test-view">
+    @if (test) {
+        <h2>{{ test.subject }}  -  {{ test.evaluation }}</h2>
+        <app-question-view [(question)]="test.questions[currentQuestionIndex]"></app-question-view>
         <section class="section-button">
             @if (hasNextQuestion()) {
                 <p-button (click)="nextQuestion()" [disabled]="!isOptionSelected()">Next</p-button>
@@ -10,11 +10,10 @@
                 <p-button (click)="checkTest()" [disabled]="!isOptionSelected()">Check Test</p-button>
             }
         </section>
-    </p-card>
-  } @else {
-    <p-card header="No test found">
-      <p>There is no test found. Please go back to the test maker view and create a test.</p>
-      <button (click)="navigateToTestMakerView()">Go to Test Maker View</button>
-    </p-card>
-  }
+    } @else {
+        <p-card header="No test found">
+            <p>There is no test found. Please go back to the test maker view and create a test.</p>
+            <button (click)="navigateToTestMakerView()">Go to Test Maker View</button>
+        </p-card>
+    }
 </div>

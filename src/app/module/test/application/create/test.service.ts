@@ -9,8 +9,8 @@ export class TestService {
 
   constructor() { }
 
-  create(subject: string, evaluation: string): Promise<Test> {
+  create(subject: string, evaluation: string, percentageOfQuestions: number): Test {
     const testRepository = new LocalFileTestRepository();
-    return testRepository.createTest(subject,evaluation);
+    return testRepository.createTest(subject, evaluation, percentageOfQuestions);
   }
 }

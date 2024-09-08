@@ -23,10 +23,11 @@ export class TestViewComponent implements OnInit {
 
     ngOnInit() {
         const routeParams = this.route.snapshot.paramMap;
-        this.test = this.testService.create(
+        this.testService.create(
             routeParams.get('subject')!,
             routeParams.get('evaluation')!,
-            parseInt(routeParams.get('percentageOfQuestions')!));
+            parseInt(routeParams.get('percentageOfQuestions')!)
+        ).subscribe(test => this.test = test);
     }
 
     nextQuestion() {

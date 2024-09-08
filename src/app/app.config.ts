@@ -5,5 +5,9 @@ import { routes } from './app.routes';
 import {LocalFileTestRepository} from "./module/test/infrastructure/localFileTestRepository";
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), LocalFileTestRepository],
+  providers: [
+      provideZoneChangeDetection({ eventCoalescing: true }),
+      provideRouter(routes),
+      {provide: 'TestRepository', useClass: LocalFileTestRepository}
+  ],
 };

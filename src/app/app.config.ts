@@ -4,6 +4,7 @@ import { routes } from './app.routes';
 import {XMLHttpRequestTestRepositoryService} from "./module/test/infrastructure/XMLHttpRequest-test-repository.service";
 import {provideHttpClient} from "@angular/common/http";
 import {LocalFileTestRepository} from "./module/test/infrastructure/localFileTestRepository";
+import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -11,5 +12,6 @@ export const appConfig: ApplicationConfig = {
       provideRouter(routes),
       {provide: 'TestRepository', useClass: LocalFileTestRepository},
       provideHttpClient(),
+      provideAnimationsAsync()
   ],
 };

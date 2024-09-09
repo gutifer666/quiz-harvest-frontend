@@ -1,2 +1,25 @@
-<p>test-maker-view works!</p>
-<button (click)="navigateToTestView()">Go to Test View</button>
+<div class="card flex justify-content-center">
+<form [formGroup]="formGroup!">
+    <p-dropdown
+        formControlName="selectedSubject"
+        [options]="subjects"
+        optionLabel="name"
+        placeholder="Seleciona una Asignatura" />
+    <p-dropdown
+        formControlName="selectedEvaluation"
+        [options]="evaluations"
+        optionLabel="name"
+        placeholder="Seleciona una Evaluación" />
+    <p-dropdown
+        formControlName="selectedPercentageOfQuestions"
+        [options]="percentagesOfQuestions"
+        optionLabel="name"
+        placeholder="Seleciona un Porcentaje" />
+</form>
+</div>
+<div>
+<p-button
+    label="Crear el test"
+    (click)="createTheTest()"
+/>
+</div>

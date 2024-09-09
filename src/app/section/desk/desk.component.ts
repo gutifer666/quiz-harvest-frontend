@@ -1,20 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 import {CardModule} from 'primeng/card';
-import {QuestionViewComponent} from "../question-view/question-view.component";
+import {QuestionComponent} from "../question/question.component";
 import {Test} from "../../module/test/domain/Test";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgIf} from "@angular/common";
 import {Button} from "primeng/button";
-import {TestService} from "../../module/test/application/create/test.service";
+import {TestService} from "../../module/test/application/test-maker/test.service";
 
 @Component({
-    selector: 'app-test-view',
+    selector: 'app-desk',
     standalone: true,
-    imports: [CardModule, QuestionViewComponent, NgIf, Button],
-    templateUrl: './test-view.component.html',
-    styleUrl: './test-view.component.scss'
+    imports: [CardModule, QuestionComponent, NgIf, Button],
+    templateUrl: './desk.component.html',
+    styleUrl: './desk.component.scss'
 })
-export class TestViewComponent implements OnInit {
+export class DeskComponent implements OnInit {
     test: Test | undefined;
     currentQuestionIndex: number = 0;
 

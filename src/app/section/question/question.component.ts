@@ -7,7 +7,7 @@ import {RadioButtonModule} from "primeng/radiobutton";
 import {FormsModule} from "@angular/forms";
 
 @Component({
-  selector: 'app-question-view',
+  selector: 'app-question',
   standalone: true,
     imports: [
         CardModule,
@@ -16,10 +16,10 @@ import {FormsModule} from "@angular/forms";
         RadioButtonModule,
         FormsModule
     ],
-  templateUrl: './question-view.component.html',
-  styleUrl: './question-view.component.scss'
+  templateUrl: './question.component.html',
+  styleUrl: './question.component.scss'
 })
-export class QuestionViewComponent {
+export class QuestionComponent {
     question = model<Question>();
 
     selectOption(option: Option) {

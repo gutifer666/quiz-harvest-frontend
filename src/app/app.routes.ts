@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import {TestMakerViewComponent} from "./section/test-maker-view/test-maker-view.component";
-import {TestViewComponent} from "./section/test-view/test-view.component";
+import {TestMakerComponent} from "./section/test-maker/test-maker.component";
+import {DeskComponent} from "./section/desk/desk.component";
 
 export const routes: Routes = [
-  { path: '', component: TestMakerViewComponent },
-  { path: 'test', component: TestViewComponent }
+  { path: '', component: TestMakerComponent },
+  { path: 'test', component: DeskComponent }
 ];

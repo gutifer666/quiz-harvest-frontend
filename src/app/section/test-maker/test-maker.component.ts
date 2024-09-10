@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {Button} from "primeng/button";
 import {DropdownModule} from "primeng/dropdown";
-import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {CardModule} from "primeng/card";
 
 interface Subject {
     name: string;
@@ -12,7 +13,6 @@ interface Evaluation {
     name: string;
 }
 
-// interface PercentageOfQuestions = number from 1 to 100
 interface PercentageOfQuestions {
     name: number;
     label: string;
@@ -24,7 +24,8 @@ interface PercentageOfQuestions {
     imports: [
         Button,
         DropdownModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        CardModule
     ],
     templateUrl: './test-maker.component.html',
     styleUrl: './test-maker.component.scss'
@@ -69,9 +70,17 @@ export class TestMakerComponent implements OnInit {
         ];
 
         this.formGroup = new FormGroup({
-            selectedSubject: new FormControl<Subject | null>(null),
-            selectedEvaluation: new FormControl<Evaluation | null>(null),
-            selectedPercentageOfQuestions: new FormControl<{ name: string } | null>(null)
+            selectedSubject: new FormControl<Subject | null>(null, [
+                Validators.required
+            ]),
+            selectedEvaluation: new FormControl<Evaluation | null>(null, [
+                Validators.required
+            ]),
+            selectedPercentageOfQuestions: new FormControl<PercentageOfQuestions | null>(this.percentagesOfQuestions[3], [
+                Validators.required,
+                Validators.min(this.percentagesOfQuestions[0].name),
+                Validators.max(this.percentagesOfQuestions[3].name)
+            ])
         });
     }
 
@@ -82,5 +91,9 @@ export class TestMakerComponent implements OnInit {
             percentageOfQuestions: this.formGroup?.get('selectedPercentageOfQuestions')?.value?.name
         }])
             .then(r => console.log(r));
+    }
+
+    resetForm() {
+        this.formGroup?.reset();
     }
 }

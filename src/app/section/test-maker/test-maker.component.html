@@ -4,22 +4,29 @@
         formControlName="selectedSubject"
         [options]="subjects"
         optionLabel="name"
-        placeholder="Seleciona una Asignatura" />
+        placeholder="Seleciona una Asignatura"
+        required
+    />
     <p-dropdown
         formControlName="selectedEvaluation"
         [options]="evaluations"
         optionLabel="name"
-        placeholder="Seleciona una Evaluación" />
+        placeholder="Seleciona una Evaluación"
+        required
+    />
     <p-dropdown
         formControlName="selectedPercentageOfQuestions"
         [options]="percentagesOfQuestions"
-        optionLabel="name"
-        placeholder="Seleciona un Porcentaje" />
+        optionLabel="label"
+        placeholder="Seleciona un Porcentaje"
+        required
+    />
 </form>
 </div>
 <div>
 <p-button
     label="Crear el test"
+    [disabled]="formGroup?.invalid"
     (click)="createTheTest()"
 />
 </div>

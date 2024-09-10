@@ -15,6 +15,7 @@ interface Evaluation {
 // interface PercentageOfQuestions = number from 1 to 100
 interface PercentageOfQuestions {
     name: number;
+    label: string;
 }
 
 @Component({
@@ -61,10 +62,10 @@ export class TestMakerComponent implements OnInit {
         ];
 
         this.percentagesOfQuestions = [
-            {name: 25},
-            {name: 50},
-            {name: 75},
-            {name: 100}
+            {name: 25, label: '25%'},
+            {name: 50, label: '50%'},
+            {name: 75, label: '75%'},
+            {name: 100, label: '100%'}
         ];
 
         this.formGroup = new FormGroup({

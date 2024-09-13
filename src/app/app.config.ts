@@ -1,9 +1,9 @@
 import {ApplicationConfig, provideZoneChangeDetection} from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-import {XMLHttpRequestTestRepositoryService} from "./module/test/infrastructure/XMLHttpRequest-test-repository.service";
+import {XMLHttpRequestTestRepositoryService} from "./infrastructure/rest/XMLHttpRequest-test-repository.service";
 import {provideHttpClient} from "@angular/common/http";
-import {LocalFileTestRepository} from "./module/test/infrastructure/localFileTestRepository";
+import {LocalFileTestRepository} from "./infrastructure/local/localFileTestRepository";
 import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
 
 export const appConfig: ApplicationConfig = {

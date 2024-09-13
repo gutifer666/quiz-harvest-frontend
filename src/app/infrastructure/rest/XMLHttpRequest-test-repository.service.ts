@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { TestRepository } from '../domain/TestRepository';
-import { Test } from '../domain/Test';
+import { TestRepository } from '../../domain/TestRepository';
+import { Test } from '../../domain/Test';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 

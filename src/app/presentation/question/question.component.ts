@@ -1,8 +1,8 @@
 import {Component, model} from '@angular/core';
 import {CardModule} from "primeng/card";
-import {Question} from "../../module/test/domain/Question";
+import {Question} from "../../domain/Question";
 import {JsonPipe, NgForOf} from "@angular/common";
-import {Option} from "../../module/test/domain/Option";
+import {Option} from "../../domain/Option";
 import {RadioButtonModule} from "primeng/radiobutton";
 import {FormsModule} from "@angular/forms";
 

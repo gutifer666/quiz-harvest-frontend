@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {CardModule} from 'primeng/card';
 import {QuestionComponent} from "../question/question.component";
-import {Test} from "../../module/test/domain/Test";
+import {Test} from "../../domain/Test";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgIf} from "@angular/common";
 import {Button} from "primeng/button";
-import {TestService} from "../../module/test/application/test-maker/test.service";
+import {TestService} from "../../application/test-maker/test.service";
 
 @Component({
     selector: 'app-desk',

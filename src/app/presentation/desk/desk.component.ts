@@ -31,7 +31,7 @@ export class DeskComponent implements OnInit {
     }
 
     nextQuestion() {
-        if (this.currentQuestionIndex < this.test?.questions.length! - 1) {
+        if (this.test?.questions && this.currentQuestionIndex < this.test.questions.length - 1) {
             this.currentQuestionIndex++;
         }
     }

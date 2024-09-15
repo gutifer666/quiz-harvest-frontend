@@ -1,4 +1,4 @@
-import {testJSON} from "../../../assets/test";
+import {testJSON} from "../../../../assets/test";
 import {Test} from "../../domain/Test";
 import {TestRepository} from "../../domain/TestRepository";
 import {Injectable} from "@angular/core";

@@ -1,4 +1,4 @@
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="registerForm" (ngSubmit)="register()">
     <p-floatLabel class="p-float-label">
         <input type="text" id="student-name" pInputText formControlName="name"/>
         <label for="student-name">Name</label>
@@ -11,5 +11,5 @@
         <input type="password" id="student-password" pInputText formControlName="password">
         <label for="student-password">Password</label>
     </p-floatLabel>
-    <p-button type="submit" [disabled]="!registerForm.valid">Submit</p-button>
+    <p-button type="submit" [disabled]="!registerForm.valid">Registrar</p-button>
 </form>

@@ -7,14 +7,15 @@ import {HttpClient} from "@angular/common/http";
 })
 export class StudentRegisterService {
     private httpClient = inject(HttpClient);
+    private urlApi = 'https://66c82d5c732bf1b79fa87208.mockapi.io/users';
 
     constructor() {
     }
 
     register(student: StudentDto): void {
-        let users = this.httpClient.get('https://66c82d5c732bf1b79fa87208.mockapi.io/users');
-        users.subscribe((data: any) => {
-            console.log(data);
+        this.httpClient.post(this.urlApi, student).subscribe(() => {
+            console.log('Student registered');
+
         });
     }
 }

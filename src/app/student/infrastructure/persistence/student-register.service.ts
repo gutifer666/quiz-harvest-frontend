@@ -13,10 +13,18 @@ export class StudentRegisterService {
     }
 
     register(student: StudentDto): void {
-        this.httpClient.post(this.urlApi, student).subscribe(() => {
-            console.log('Student registered');
-
+        this.httpClient.post<ApiResponse>(this.urlApi, student).subscribe(res => {
+            res.token = 'el-token';
+            console.log(res);
         });
     }
+}
+
+interface ApiResponse {
+    id: string;
+    name: string;
+    email: string;
+    password: string;
+    token: string;
 }
 
